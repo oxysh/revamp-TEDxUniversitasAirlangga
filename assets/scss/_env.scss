@@ -1,0 +1,33 @@
+$batman: #010101;
+$grey: #E2E2E2;
+$white: #EBEBEB;
+$transparant: #EBEBEB33;
+$new-red: #E34444;
+$prime-red: #960001;
+$darker-red: #400000;
+$glass-green: #A3BDBE;
+$new-green: #24B9BA;
+$prime-green: #008F90;
+$darker-green: #004E4E;
+$sand-beach: #EADFD3;
+$darker-sand-beach: #D7C3A9;
+
+// --------------- divider ---------------
+
+@mixin scrollbar($color-bg, $color-thumb, $width: 10px) {
+    overflow-y: scroll;
+    
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $color-bg;
+        border-radius: $width;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $color-thumb;
+        border-radius: $width;
+    }
+}

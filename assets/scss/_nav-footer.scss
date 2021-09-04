@@ -1,0 +1,110 @@
+nav {
+    margin: 2rem 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        height: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    .menuItems {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        li {
+            position: relative;
+            a {
+                text-decoration: none;
+                font-family: 'Spartan', sans-serif;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 600;
+                position: relative;
+                transition: all 0.5s ease-in-out;
+                color: $white;
+        
+                &::before {
+                    content: attr(data-item);
+                    transition: 0.5s;
+                    color: $prime-red;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 0;
+                    overflow: hidden;
+                }
+        
+                &:hover {
+                    &::before {
+                    width: 100%;
+                    transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    #login, .dropdown {
+        position: absolute;
+        right: 0;
+    }
+
+    #account {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        border-radius: 50px;
+
+        p {
+            color: $batman;
+        }
+    }
+
+    .dropdown-menu {
+        padding: .5rem;
+        background-color: $white;
+
+        .dropdown-item {
+            color: $batman;
+
+            &:hover {
+                background-color: #008f9026;
+            }
+        }
+    }
+}
+
+.nav-sm {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+    .nav-sm {
+        display: unset;  
+    }
+}
