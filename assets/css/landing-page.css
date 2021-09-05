@@ -39,13 +39,18 @@ nav .menuItems {
 
 nav .menuItems li {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .menuItems li a {
   text-decoration: none;
   font-family: 'Spartan', sans-serif;
   font-size: 16px;
-  line-height: 18px;
   font-weight: 600;
   position: relative;
   -webkit-transition: all 0.5s ease-in-out;
@@ -79,7 +84,10 @@ nav #login, nav .dropdown {
 }
 
 nav #account {
-  background-color: #EBEBEB;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: .3rem .6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +99,8 @@ nav #account {
           justify-content: center;
   gap: .5rem;
   border-radius: 50px;
+  background-color: #EBEBEB;
+  border: 1px solid #606060;
 }
 
 nav #account p {
@@ -149,6 +159,10 @@ nav .dropdown-menu .dropdown-item:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.heading .heading-body a.button.submit {
+  padding: 1rem 1.25rem;
 }
 
 .heading .x-container {

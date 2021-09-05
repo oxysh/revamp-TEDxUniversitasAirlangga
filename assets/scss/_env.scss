@@ -1,4 +1,5 @@
 $batman: #010101;
+$dim-grey: #606060;
 $grey: #E2E2E2;
 $white: #EBEBEB;
 $transparant: #EBEBEB33;
@@ -29,5 +30,40 @@ $darker-sand-beach: #D7C3A9;
     &::-webkit-scrollbar-thumb {
         background: $color-thumb;
         border-radius: $width;
+    }
+}
+
+@mixin account() {
+    width: fit-content;
+    padding: .3rem .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: 50px;
+    background-color: $white;
+    border: 1px solid $dim-grey;
+
+    p {
+        color: $batman;
+    }
+}
+
+@mixin alert($border, $bg) {
+    padding: 10px 20px;
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+    border: 1px solid $border;
+    background-color: $bg;
+
+    h4 {
+        margin: 0;
+        color: $border;
+    }
+
+    h6 {
+        margin: 0;
+        color: $batman;
     }
 }
