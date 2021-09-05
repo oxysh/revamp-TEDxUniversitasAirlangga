@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDx Universitas Airlangga</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/x.svg" type="image/gif" sizes="16x16">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/registration.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <!-- Desktop -->
+        <nav>
+            <div class="container">
+                <img class="brand" src="assets/img/white-logo.png" alt="navbar-brand">
+                <ul class="menuItems">
+                    <li class="active"><a href='#' data-item='Home'>Home</a></li>
+                    <li><a href='#' data-item='About'>About</a></li>
+                    <li><a href='#' data-item='Event'>Event</a></li>
+                    <li><a href='#' data-item='Merchandise'>Merchandise</a></li>
+                    <li><a href='#' data-item='Contact Us'>Contact Us</a></li>
+                </ul>
+                <!-- Kalo belom login -->
+                <!-- <a href="login.html" id="login" class="button secondary">Login</a> -->
+                <!-- Kalo udah login -->
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="account" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="assets/img/user.svg" alt="profile">
+                        <p>Nama user</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="account">
+                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">lalala</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile -->
+        <div class="nav-sm">
+            <!-- BELOM HEHE -->
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Content -->
+        <div class="content">
+            <div class="left">
+                <h1>Sign up so you don't miss it!</h1>
+                <h3>Let's set up your account and join our event!</h3>
+            </div>
+            <form class="right">
+                <fieldset>
+                    <h2>Register</h2>
+                    <div class="alert" id="alert-regis">
+                        <!-- Isian alert -->
+                    </div>
+                    <div class="input-form">
+                        <label for="fullname">Fullname <span class="text-red">*</span></label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Hi, what's your name?">
+                    </div>
+                    <div class="input-form">
+                        <label for="email">Email <span class="text-red">*</span></label>
+                        <input type="text" name="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="input-form">
+                        <label for="password">Password <span class="text-red">*</span></label>
+                        <input type="password" name="password" id="password">
+                        <h5>Make sure it's at least 8 characters</h5>
+                        <div class="checkbox">
+                            <input type="checkbox" name="show-password" id="show-password">
+                            <label for="show-password"> Show Password</label>
+                        </div>
+                    </div>
+                    <div class="input-form">
+                        <label for="confirm-pass">Confirm Password <span class="text-red">*</span></label>
+                        <input type="password" name="confirm-password" id="confirm-password">
+                        <h5>Both password must match</h5>
+                        <div class="checkbox">
+                            <input type="checkbox" name="show-confirm-password" id="show-confirm-password">
+                            <label for="show-confirm-password"> Show Password</label>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div>
+                            <h5>Already have an account?</h5>
+                            <a href="login.html" class="text-green">Login here</a>
+                        </div>
+                        <button class="next submit">Next <img src="assets/img/next.svg" alt=""></button>
+                    </div>
+                </fieldset>
+                <fieldset id="next-regis">
+                    <button class="previous"><img src="assets/img/previous.svg" alt=""></button>
+                    <h2>Register</h2>
+                    <div class="alert" id="alert-next-regis">
+                        <!-- Isian alert -->
+                    </div>
+                    <div class="age-phone">
+                        <div class="input-form">
+                            <label for="age">Age <span class="text-red">*</span></label>
+                            <input type="number" name="age" id="age" placeholder="19">
+                        </div>
+                        <div class="input-form">
+                            <label for="phone">Phone Number <span class="text-red">*</span></label>
+                            <input type="text" name="phone" id="phone" placeholder="081234567890">
+                        </div>
+                    </div>
+                    <div class="input-form">
+                        <label for="institute">Institute <span class="text-red">*</span></label>
+                        <input type="text" name="institute" id="institute" placeholder="Universitas Airlangga">
+                    </div>
+                    <div class="input-form">
+                        <label for="address">Address <span class="text-red">*</span></label>
+                        <textarea type="text" name="address" id="address"
+                            placeholder="Jalan Dr. Ir. H. Soekarno, Mulyorejo, Surabaya, Jawa Timur 60115"
+                            rows="4"></textarea>
+                    </div>
+                    <div class="footer">
+                        <div>
+                            <h5>Already have an account?</h5>
+                            <a href="login.html" class="text-green">Login here</a>
+                        </div>
+                        <button class="regis submit">Register</button>
+                    </div>
+                </fieldset>
+        </div>
+        <!-- Content End -->
+
+        <!-- Footer -->
+        <!-- Footer End -->
+    </div>
+
+    <!-- Bubbles -->
+    <div class="bubbles">
+        <ul class="bubble-red">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="bubble-green">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/js/nav-footer.js"></script>
+    <script src="assets/js/registration.js"></script>
+</body>
+
+</html>
