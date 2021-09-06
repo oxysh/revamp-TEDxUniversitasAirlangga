@@ -1,9 +1,11 @@
 nav {
     z-index: 999;
-    margin: 2rem 0;
+    padding: 2rem 0 1.5rem 0;
     width: 100%;
     position: fixed;
     left: 0;
+    background-color: #01010161;
+    backdrop-filter: blur(16px);
 
     .container {
         position: relative;
