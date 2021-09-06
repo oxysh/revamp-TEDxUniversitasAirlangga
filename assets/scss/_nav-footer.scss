@@ -1,4 +1,5 @@
 nav {
+    z-index: 999;
     margin: 2rem 0;
     width: 100%;
     position: fixed;
@@ -15,6 +16,7 @@ nav {
         height: 100%;
         position: absolute;
         left: 0;
+        cursor: pointer;
     }
 
     .menuItems {
@@ -73,18 +75,32 @@ nav {
 
     .dropdown-menu {
         padding: .5rem;
+        top: 0;
         background-color: $white;
-
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: top;
+        animation-fill-mode: forwards; 
+        transform: scale(0.9, 0.7) translateY(-20px);
+        display: block; 
+        transition: all 500ms ease;
+        
         .dropdown-item {
             color: $batman;
-
+            
             &:hover {
                 background-color: #008f9026;
             }
         }
     }
-}
+        
+    .show.dropdown-menu {
+        transform: scale(1, 1) translateY(34px) !important;  
+        opacity: 1;
+        visibility: visible;
+    }
 
+}
 .nav-sm {
     display: none;
 }

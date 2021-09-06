@@ -1,4 +1,5 @@
 nav {
+  z-index: 999;
   margin: 2rem 0;
   width: 100%;
   position: fixed;
@@ -22,6 +23,7 @@ nav .brand {
   height: 100%;
   position: absolute;
   left: 0;
+  cursor: pointer;
 }
 
 nav .menuItems {
@@ -109,7 +111,19 @@ nav #account p {
 
 nav .dropdown-menu {
   padding: .5rem;
+  top: 0;
   background-color: #EBEBEB;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scale(0.9, 0.7) translateY(-20px);
+          transform: scale(0.9, 0.7) translateY(-20px);
+  display: block;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 nav .dropdown-menu .dropdown-item {
@@ -118,6 +132,13 @@ nav .dropdown-menu .dropdown-item {
 
 nav .dropdown-menu .dropdown-item:hover {
   background-color: #008f9026;
+}
+
+nav .show.dropdown-menu {
+  -webkit-transform: scale(1, 1) translateY(34px) !important;
+          transform: scale(1, 1) translateY(34px) !important;
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-sm {
