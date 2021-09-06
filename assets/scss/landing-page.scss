@@ -14,6 +14,7 @@
     .heading-body {
         width: 100%;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
@@ -52,8 +53,8 @@
 }
 
 @media screen and (max-width: 576px) {
-    .content {
-        .content-body {
+    .heading {
+        .heading-body {
             flex-direction: column;
             gap: 3rem;
         }

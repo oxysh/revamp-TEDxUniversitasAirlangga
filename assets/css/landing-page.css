@@ -153,6 +153,10 @@ nav .dropdown-menu .dropdown-item:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -207,26 +211,26 @@ nav .dropdown-menu .dropdown-item:hover {
 }
 
 @media screen and (max-width: 576px) {
-  .content .content-body {
+  .heading .heading-body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 3rem;
   }
-  .content .x-container {
+  .heading .x-container {
     width: 60%;
   }
-  .content .x-container .x {
+  .heading .x-container .x {
     width: 100%;
   }
-  .content .headline {
+  .heading .headline {
     width: 80%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .content .headline h1, .content .headline h3 {
+  .heading .headline h1, .heading .headline h3 {
     text-align: center;
   }
 }

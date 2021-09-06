@@ -160,7 +160,7 @@ body {
 }
 
 .content .right {
-  width: 32%;
+  width: 420px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,7 +272,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: radial-gradient(circle at 100%, #00909024 0%, transparent 70%);
+  background-image: radial-gradient(circle at 100%, #00909024 0%, transparent 50%);
 }
 
 .content .right fieldset:not(:first-of-type) {
