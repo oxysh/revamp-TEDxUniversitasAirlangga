@@ -69,8 +69,9 @@ const arrow = `<img src="assets/img/next.svg" alt="">`;
                     if (animating) return false;
                     animating = true;
 
-                    current_fs = $(this).parent().parent();
-                    next_fs = $(this).parent().parent().next();
+                    current_fs = $(this).parent().parent().parent();
+                    next_fs = $(this).parent().parent().parent().next();
+                    console.log(current_fs);
 
                     //activate next step on progressbar using the index of next_fs
                     $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -116,8 +117,8 @@ const arrow = `<img src="assets/img/next.svg" alt="">`;
             if (animating) return false;
             animating = true;
 
-            current_fs = $(this).parent();
-            previous_fs = $(this).parent().prev();
+            current_fs = $(this).parent().parent();
+            previous_fs = $(this).parent().parent().prev();
 
             //de-activate current step on progressbar
             $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
