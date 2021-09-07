@@ -26,6 +26,30 @@ const doesntMatch =
         </div>
     </div>`;
 
+const loader =
+    `<div class="loader">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="16px" height="16px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+        <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+        </rect>
+        <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+        </rect>
+        <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+        </rect>
+        </svg>
+    </div>`;
+
+const arrow = `<img src="assets/img/next.svg" alt="">`;
+
 // ANIMASI
 ; (function ($) {
     "use strict";
@@ -38,61 +62,66 @@ const doesntMatch =
         $(".next").click(function (e) {
             e.preventDefault();
 
-            if ($('#fullname')[0].value == '' || $('#email')[0].value == '' || $('#password')[0].value == '' || $('#confirm-password')[0].value == '') {
-                $('#alert-regis').css({ 'display': 'block' })
-                $('#alert-regis')[0].innerHTML = enterAll;
-            }
-            else if ($('#email')[0].value == 'null') {
-                $('#alert-regis').css({ 'display': 'block' });
-                $('#alert-regis')[0].innerHTML = registered;
-            }
-            else if ($('#password')[0].value != $('#confirm-password')[0].value) {
-                $('#alert-regis').css({ 'display': 'block' });
-                $('#alert-regis')[0].innerHTML = doesntMatch;
-            }
-            else {
-                if (animating) return false;
-                animating = true;
+            // LOADER
+            $('#ic-next')[0].innerHTML = loader;
+            setTimeout(() => {
+                $('#ic-next')[0].innerHTML = arrow;
+                if ($('#fullname')[0].value == '' || $('#email')[0].value == '' || $('#password')[0].value == '' || $('#confirm-password')[0].value == '') {
+                    $('#alert-regis').css({ 'display': 'block' })
+                    $('#alert-regis')[0].innerHTML = enterAll;
+                }
+                else if ($('#email')[0].value == 'null') {
+                    $('#alert-regis').css({ 'display': 'block' });
+                    $('#alert-regis')[0].innerHTML = registered;
+                }
+                else if ($('#password')[0].value != $('#confirm-password')[0].value) {
+                    $('#alert-regis').css({ 'display': 'block' });
+                    $('#alert-regis')[0].innerHTML = doesntMatch;
+                }
+                else {
+                    if (animating) return false;
+                    animating = true;
 
-                current_fs = $(this).parent().parent();
-                next_fs = $(this).parent().parent().next();
+                    current_fs = $(this).parent().parent();
+                    next_fs = $(this).parent().parent().next();
 
-                //activate next step on progressbar using the index of next_fs
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                    //activate next step on progressbar using the index of next_fs
+                    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-                //hide the current fieldset with style
-                current_fs.animate({
-                    opacity: 0
-                }, {
-                    step: function (now) {
-                        //as the opacity of current_fs reduces to 0 - stored in "now"
-                        //1. scale current_fs down to 80%
-                        scale = 1 - (1 - now) * 0.2;
-                        //2. bring next_fs from the right(50%)
-                        left = (now * 50) + "%";
-                        //3. increase opacity of next_fs to 1 as it moves in
-                        opacity = 1 - now;
-                        current_fs.css({
-                            'transform': 'scale(' + scale + ')',
-                            'position': 'absolute',
-                            'align-self': 'center',
-                            'width': '100%'
-                        });
-                        next_fs.css({
-                            'left': left,
-                            'opacity': opacity,
-                            'display': 'flex'
-                        });
-                    },
-                    duration: 800,
-                    complete: function () {
-                        current_fs.hide();
-                        animating = false;
-                    },
-                    //this comes from the custom easing plugin
-                    easing: 'easeInOutBack'
-                });
-            }
+                    //hide the current fieldset with style
+                    current_fs.animate({
+                        opacity: 0
+                    }, {
+                        step: function (now) {
+                            //as the opacity of current_fs reduces to 0 - stored in "now"
+                            //1. scale current_fs down to 80%
+                            scale = 1 - (1 - now) * 0.2;
+                            //2. bring next_fs from the right(50%)
+                            left = (now * 50) + "%";
+                            //3. increase opacity of next_fs to 1 as it moves in
+                            opacity = 1 - now;
+                            current_fs.css({
+                                'transform': 'scale(' + scale + ')',
+                                'position': 'absolute',
+                                'align-self': 'center',
+                                'width': '100%'
+                            });
+                            next_fs.css({
+                                'left': left,
+                                'opacity': opacity,
+                                'display': 'flex'
+                            });
+                        },
+                        duration: 800,
+                        complete: function () {
+                            current_fs.hide();
+                            animating = false;
+                        },
+                        //this comes from the custom easing plugin
+                        easing: 'easeInOutBack'
+                    });
+                }
+            }, 2000);
         });
 
         $(".previous").click(function (e) {

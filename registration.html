@@ -25,11 +25,11 @@
             <div class="container">
                 <img class="brand" src="assets/img/white-logo.png" alt="navbar-brand">
                 <ul class="menuItems">
-                    <li class="active"><a href='#' data-item='Home'>Home</a></li>
+                    <li><a href='landing-page.html' data-item='Home'>Home</a></li>
                     <li><a href='#' data-item='About'>About</a></li>
                     <li><a href='#' data-item='Event'>Event</a></li>
                     <li><a href='#' data-item='Merchandise'>Merchandise</a></li>
-                    <li><a href='#' data-item='Contact Us'>Contact Us</a></li>
+                    <li><a href='#' data-item='Sponsorship'>Sponsorship</a></li>
                 </ul>
                 <!-- Kalo belom login -->
                 <!-- <a href="login.html" id="login" class="button secondary">Login</a> -->
@@ -61,45 +61,48 @@
                 <h1>Sign up so you don't miss it!</h1>
                 <h3>Let's set up your account and join our event!</h3>
             </div>
-            <form class="right">
+            <div class="right">
                 <fieldset>
                     <h2>Register</h2>
                     <div class="alert" id="alert-regis">
                         <!-- Isian alert -->
                     </div>
-                    <div class="input-form">
-                        <label for="fullname">Fullname <span class="text-red">*</span></label>
-                        <input type="text" name="fullname" id="fullname" placeholder="Hi, what's your name?">
-                    </div>
-                    <div class="input-form">
-                        <label for="email">Email <span class="text-red">*</span></label>
-                        <input type="text" name="email" id="email" placeholder="your@email.com">
-                    </div>
-                    <div class="input-form">
-                        <label for="password">Password <span class="text-red">*</span></label>
-                        <input type="password" name="password" id="password">
-                        <h5>Make sure it's at least 8 characters</h5>
-                        <div class="checkbox">
-                            <input type="checkbox" name="show-password" id="show-password">
-                            <label for="show-password"> Show Password</label>
+                    <form class="card-form" action="">
+                        <div class="input-form">
+                            <label for="fullname">Fullname <span class="text-red">*</span></label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Hi, what's your name?">
                         </div>
-                    </div>
-                    <div class="input-form">
-                        <label for="confirm-pass">Confirm Password <span class="text-red">*</span></label>
-                        <input type="password" name="confirm-password" id="confirm-password">
-                        <h5>Both password must match</h5>
-                        <div class="checkbox">
-                            <input type="checkbox" name="show-confirm-password" id="show-confirm-password">
-                            <label for="show-confirm-password"> Show Password</label>
+                        <div class="input-form">
+                            <label for="email">Email <span class="text-red">*</span></label>
+                            <input type="text" name="email" id="email" placeholder="your@email.com">
                         </div>
-                    </div>
-                    <div class="footer">
-                        <div>
-                            <h5>Already have an account?</h5>
-                            <a href="login.html" class="text-green">Login here</a>
+                        <div class="input-form">
+                            <label for="password">Password <span class="text-red">*</span></label>
+                            <input type="password" name="password" id="password">
+                            <h5>Make sure it's at least 8 characters</h5>
+                            <div class="checkbox">
+                                <input type="checkbox" name="show-password" id="show-password">
+                                <label for="show-password"> Show Password</label>
+                            </div>
                         </div>
-                        <button class="next submit">Next <img src="assets/img/next.svg" alt=""></button>
-                    </div>
+                        <div class="input-form">
+                            <label for="confirm-pass">Confirm Password <span class="text-red">*</span></label>
+                            <input type="password" name="confirm-password" id="confirm-password">
+                            <h5>Both password must match</h5>
+                            <div class="checkbox">
+                                <input type="checkbox" name="show-confirm-password" id="show-confirm-password">
+                                <label for="show-confirm-password"> Show Password</label>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div>
+                                <h5>Already have an account?</h5>
+                                <a href="login.html" class="text-green">Login here</a>
+                            </div>
+                            <button class="next submit">Next <span id="ic-next"><img src="assets/img/next.svg"
+                                        alt=""></span></button>
+                        </div>
+                    </form>
                 </fieldset>
                 <fieldset id="next-regis">
                     <button class="previous"><img src="assets/img/previous.svg" alt=""></button>
@@ -107,34 +110,37 @@
                     <div class="alert" id="alert-next-regis">
                         <!-- Isian alert -->
                     </div>
-                    <div class="age-phone">
-                        <div class="input-form">
-                            <label for="age">Age <span class="text-red">*</span></label>
-                            <input type="number" name="age" id="age" placeholder="19">
+                    <form class="card-form" action="">
+                        <div class="age-phone">
+                            <div class="input-form">
+                                <label for="age">Age <span class="text-red">*</span></label>
+                                <input type="number" name="age" id="age" placeholder="19">
+                            </div>
+                            <div class="input-form">
+                                <label for="phone">Phone Number <span class="text-red">*</span></label>
+                                <input type="text" name="phone" id="phone" placeholder="081234567890">
+                            </div>
                         </div>
                         <div class="input-form">
-                            <label for="phone">Phone Number <span class="text-red">*</span></label>
-                            <input type="text" name="phone" id="phone" placeholder="081234567890">
+                            <label for="institute">Institute <span class="text-red">*</span></label>
+                            <input type="text" name="institute" id="institute" placeholder="Universitas Airlangga">
                         </div>
-                    </div>
-                    <div class="input-form">
-                        <label for="institute">Institute <span class="text-red">*</span></label>
-                        <input type="text" name="institute" id="institute" placeholder="Universitas Airlangga">
-                    </div>
-                    <div class="input-form">
-                        <label for="address">Address <span class="text-red">*</span></label>
-                        <textarea type="text" name="address" id="address"
-                            placeholder="Jalan Dr. Ir. H. Soekarno, Mulyorejo, Surabaya, Jawa Timur 60115"
-                            rows="4"></textarea>
-                    </div>
-                    <div class="footer">
-                        <div>
-                            <h5>Already have an account?</h5>
-                            <a href="login.html" class="text-green">Login here</a>
+                        <div class="input-form">
+                            <label for="address">Address <span class="text-red">*</span></label>
+                            <textarea type="text" name="address" id="address"
+                                placeholder="Jalan Dr. Ir. H. Soekarno, Mulyorejo, Surabaya, Jawa Timur 60115"
+                                rows="4"></textarea>
                         </div>
-                        <button class="regis submit">Register</button>
-                    </div>
+                        <div class="footer">
+                            <div>
+                                <h5>Already have an account?</h5>
+                                <a href="login.html" class="text-green">Login here</a>
+                            </div>
+                            <button class="regis submit">Register</button>
+                        </div>
+                    </form>
                 </fieldset>
+            </div>
         </div>
         <!-- Content End -->
 
