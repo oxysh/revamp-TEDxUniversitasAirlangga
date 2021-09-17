@@ -26,3 +26,10 @@ function parallaxIt(target, movement) {
 $(window).on('resize scroll', () => {
     rect = $('.x-container')[0].getBoundingClientRect();
 })
+
+// Ripple Effect-nya pool
+$('.pool').ripples({
+    resolution: 256,
+    perturbance: 0.005
+});
+
