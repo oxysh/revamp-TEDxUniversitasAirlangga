@@ -2,6 +2,7 @@
 @import 'nav-footer';
 
 .content {
+    min-height: calc(100vh - 5rem);
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -135,14 +136,6 @@ h2 {
         bottom: 1rem;
         right: 2rem;
     }
-
-    .text-red {
-        color: $new-red !important;
-    }
-
-    .text-green {
-        color: $new-green !important;
-    }
 }
 
 .others {
@@ -189,9 +182,8 @@ h2 {
         align-items: center;
         gap: .25rem;
 
-        img {
-            width: 100px;
-            height: 100px;
+        .ic-read-more {
+            @include read-more(100px);
         }
     }
 }

@@ -110,33 +110,97 @@
     box-shadow: 0px 20px 50px rgba(108, 69, 69, 0.5);
 }
 
+.events {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .event-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .ic-read-more {
+        @include read-more(250px);
+    }
+}
+
 
 .about {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .about-content {
-        display: grid;
+        display: flex;
         align-items: center;
-        grid-template-columns: 1fr 1.5fr;
+        justify-content: center;
+        gap: 2rem;
     }
 
     .about-desc {
+        max-width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 1rem;
+
+        a {
+            align-self: flex-end;
+        }
     }
 
     h1, h3 {
+        margin: 0;
         text-align: start;
     }
 
     hr {
         width: 100px;
+        margin: 0;
+        opacity: 1;
         border-bottom: 4px solid $prime-red;
+    }
+
+    .circle {
+        margin-top: 6rem;
+        width: 280px;
+        height: 280px;
+        position: relative;
+        border-radius: 50%;
+        background-image: url(../img/ripple-desc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.5);
+
+        &::before {
+            content: "";
+            z-index: -1;
+            width: 150%;
+            height: 150%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -57%);
+
+            border-radius: 50%;
+            background-image: linear-gradient(117deg, #81191ac2 13.9%, #1b101154 59.97%, #1b101154 64.97%, #0c5354c2 91.07%);
+        }
     }
 }
 
@@ -161,9 +225,37 @@
     .pool {
         height: 40vh;
     }
+
+    .events {
+        gap: 1rem;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ic-read-more {
+            width: 120px;
+            height: 120px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    .about .circle {
+        width: 240px;
+        height: 240px;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .moving-text .visible {
+        top: 30%;
+    }
+
     .heading {
         .heading-body {
             flex-direction: column;
@@ -184,6 +276,25 @@
 
             h1, h3 {
                 text-align: center;
+            }
+        }
+    }
+
+    .about {
+        .about-content {
+            flex-direction: column-reverse;
+        }
+
+        .about-desc {
+            max-width: 90%;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+        
+            &::before {
+                transform: translate(-50%, -50%);
             }
         }
     }

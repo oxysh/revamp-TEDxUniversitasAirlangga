@@ -317,6 +317,7 @@ footer .content-footer .copyright h5 {
 }
 
 .content {
+  min-height: calc(100vh - 5rem);
   margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -529,14 +530,6 @@ h2.wb {
   right: 2rem;
 }
 
-.status .text-red {
-  color: #E34444 !important;
-}
-
-.status .text-green {
-  color: #24B9BA !important;
-}
-
 .others {
   margin-bottom: 4rem;
   width: 100%;
@@ -611,9 +604,65 @@ h2.wb {
   gap: .25rem;
 }
 
-.others .event img {
+.others .event .ic-read-more {
   width: 100px;
   height: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #EBEBEB;
+  overflow: hidden;
+}
+
+.others .event .ic-read-more img {
+  width: 100px;
+  height: 100px;
+}
+
+.others .event .ic-read-more span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 1s, padding-top 1s;
+  transition: width 1s, padding-top 1s;
+}
+
+.others .event .ic-read-more p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 600;
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.others .event .ic-read-more:hover span {
+  width: calc(100% * 2.25);
+  padding-top: calc(100% * 2.25);
+}
+
+.others .event .ic-read-more:hover p {
+  color: #fff;
 }
 
 @media screen and (max-width: 992px) {
