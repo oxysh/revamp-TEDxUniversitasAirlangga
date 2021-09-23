@@ -47,7 +47,7 @@ let nextHeight;
                     animating = false;
 
                     if (current_fs[0].classList[1] == 'before-fcs') {
-                        nextHeight = next_fs[0].offsetHeight;
+                        nextHeight = next_fs.parent()[0].offsetHeight;
                     }
                     $('.content').css({
                         'height': nextHeight
