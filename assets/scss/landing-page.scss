@@ -134,7 +134,7 @@
     }
 
     .ic-read-more {
-        @include read-more(250px);
+        @include read-more(250px, 100px);
     }
 }
 

@@ -8,14 +8,15 @@
     flex-direction: column;
     gap: 2.5rem;
 }
+.header, .participated, .others, .name {
+    > h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
 
-h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 700;
-
-    &.wb {
-        font-weight: 500;
+        &.wb {
+            font-weight: 500;
+        }
     }
 }
 
@@ -70,7 +71,7 @@ h2 {
         // align-items: center;
         border-radius: 10px;
         border: 1px solid $white;
-        background-color: $batman;
+        background-color: #0101014D;
         background-blend-mode: hue;
     }
     
@@ -85,6 +86,11 @@ h2 {
         border-right: 1px solid $white;
         background-color: rgba(163, 189, 190, 0.3);
         background-blend-mode: hard-light;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -120,7 +126,7 @@ h2 {
             align-items: flex-end;
     
             p {
-                font-weight: 600;
+                font-weight: 500;
             }
 
             h2 {
@@ -183,12 +189,19 @@ h2 {
         gap: .25rem;
 
         .ic-read-more {
-            @include read-more(100px);
+            @include read-more(100px, 40px);
         }
     }
 }
 
 
+
+@media screen and (max-width: 1200px) {
+    .participated p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
 
 @media screen and (max-width: 992px) {
     .content {
@@ -196,10 +209,12 @@ h2 {
         gap: 1.5rem;
     }
 
-    h2 {
-        font-size: 18px;
+    .header, .participated, .others, .name {
+        h2 {
+            font-size: 18px;
+        }
     }
-
+    
     .header {
         flex-direction: column-reverse;
         align-items: center;
@@ -224,6 +239,10 @@ h2 {
             border-right: none;
             border-bottom: 1px solid $white;
         }
+
+        p {
+        text-align: center;
+        }
     }
 
     .status {
@@ -235,6 +254,10 @@ h2 {
             hr {
                 width: 50%;
                 align-self: center;
+            }
+
+            > div > h2 {
+                text-align: center;
             }
         }
 

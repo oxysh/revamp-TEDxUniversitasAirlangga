@@ -9,7 +9,7 @@ $("body").mousemove(e => {
 
 // Ticker event will be called on every frame
 TweenLite.ticker.addEventListener('tick', () => {
-    if (mouse.moved) {
+    if (mouse.moved && window.innerWidth >= '576') {
         parallaxIt(".x", -20);
         parallaxIt(".slide", -20);
     }
@@ -38,8 +38,6 @@ const reads = document.querySelectorAll('.ic-read-more');
 const ELEMENTS_SPAN = [];
 
 reads.forEach((element, index) => {
-    let addAnimation = false;
-
     // If The span element for this element does not exist in the array, add it.
     if (!ELEMENTS_SPAN[index])
         ELEMENTS_SPAN[index] = element.querySelector("span");
