@@ -1,5 +1,10 @@
+// HEIGHT FOOTER
+let footerHeight = $('fieldset.line').parent()[0].offsetHeight;
+$('.content').css({
+    'height': footerHeight
+});
+
 // MOVING LINE
-let nextHeight;
 ; (function ($) {
     "use strict";
 
@@ -46,12 +51,12 @@ let nextHeight;
                     current_fs.hide();
                     animating = false;
 
-                    if (current_fs[0].classList[1] == 'before-fcs') {
-                        nextHeight = next_fs.parent()[0].offsetHeight;
-                    }
-                    $('.content').css({
-                        'height': nextHeight
-                    })
+                    // if (current_fs[0].classList[1] == 'before-fcs') {
+                    //     nextHeight = next_fs.parent()[0].offsetHeight;
+                    // }
+                    // $('.content').css({
+                    //     'height': nextHeight
+                    // })
                 },
                 //this comes from the custom easing plugin
                 easing: 'easeInOutBack'
@@ -93,12 +98,12 @@ let nextHeight;
                     current_fs.hide();
                     animating = false;
 
-                    if (current_fs[0].classList[1] == 'before-fcs') {
-                        nextHeight = previous_fs[0].offsetHeight;
-                    }
-                    $('.content').css({
-                        'height': nextHeight
-                    })
+                    // if (current_fs[0].classList[1] == 'before-fcs') {
+                    //     nextHeight = previous_fs[0].offsetHeight;
+                    // }
+                    // $('.content').css({
+                    //     'height': nextHeight
+                    // })
                 },
                 //this comes from the custom easing plugin
                 easing: 'easeInOutBack'
@@ -131,31 +136,31 @@ const lna =
         <div class="member2-inarow">
             <div class="member2">
                 <div class="member-card">
-                    <h4>LOM NGISI</h4>
-                    <p>Manager | FST 19</p>
+                    <h4>Iqbaal</h4>
+                    <p>Manager | FEB 19</p>
                     <div class="footer">
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.instagram.com/iqbaldida" target="_blank"
                             rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg"
                                 alt=""></a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img
+                        <a target="_blank" rel="noopener noreferrer" style="opacity: .2;"><img
                                 src="assets/img/ic-twitter-black.svg" alt=""></a>
                         <div></div>
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/ubin.png" alt="">
+                <img src="assets/img/iqbaal.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/ubin.png" alt="">
+                <img src="assets/img/rio.png" alt="">
                 <div class="member-card">
-                    <h4>LOM NGISI</h4>
-                    <p>Co-Manager | FST 19</p>
+                    <h4>Rio</h4>
+                    <p>Co-Manager | FEB 20</p>
                     <div class="footer">
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.instagram.com/ahmdsatrio" target="_blank"
                             rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg"
                                 alt=""></a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img
+                        <a href="https://twitter.com/itsamesatrio" target="_blank" rel="noopener noreferrer"><img
                                 src="assets/img/ic-twitter-black.svg" alt=""></a>
                         <div></div>
                         <hr class="red">
@@ -438,13 +443,13 @@ const curation =
             <div class="member2">
                 <img src="assets/img/ubin.png" alt="">
                 <div class="member-card">
-                    <h4>LOM NGISI</h4>
-                    <p>Co-Manager | FST 19</p>
+                    <h4>Aarnee</h4>
+                    <p>Co-Manager | FISIP 19</p>
                     <div class="footer">
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.instagram.com/aarneebaskoro" target="_blank"
                             rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg"
                                 alt=""></a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img
+                        <a target="_blank" rel="noopener noreferrer" style="opacity: .2;"><img
                                 src="assets/img/ic-twitter-black.svg" alt=""></a>
                         <div></div>
                         <hr class="red">
@@ -473,6 +478,54 @@ const curation =
                     <a href="https://www.instagram.com/ninaaadr" target="_blank"
                         rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
                     <a href="https://twitter.com/aaddriani" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Raymond</h4>
+                <p>Volunteer | FISIP 20</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/raymond.tkd" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" style="opacity:.2;><img 
+                        src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Iam</h4>
+                <p>Volunteer | FEB 20</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/ilham_adipratama" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" style="opacity:.2;><img 
+                        src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Shavinas</h4>
+                <p>Volunteer | FEB 20</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/Savinasmayada" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" style="opacity:.2;><img 
+                        src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Dean</h4>
+                <p>Volunteer | FISIP 20</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/ehren_damanik" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a href="https://twitter.com/EDMD01" target="_blank"
                         rel="noopener noreferrer"><img src="assets/img/ic-twitter-black.svg" alt=""></a>
                     <div></div>
                     <hr class="green">
@@ -678,7 +731,19 @@ const marketing =
                 <div class="footer">
                     <a href="https://www.instagram.com/_yasminelysia" target="_blank"
                         rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
-                    <a href="https://twitter.com/@moonjellyu" target="_blank"
+                    <a href="https://twitter.com/moonjellyu" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Aisyah</h4>
+                <p>Volunteer | FISIP 19</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/aisyahridhoo" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a href="https://twitter.com/aisyahridho" target="_blank"
                         rel="noopener noreferrer"><img src="assets/img/ic-twitter-black.svg" alt=""></a>
                     <div></div>
                     <hr class="green">
@@ -1016,10 +1081,22 @@ const design =
                 <div class="footer">
                     <a href="https://www.instagram.com/anyamaulidyna" target="_blank"
                         rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
-                    <atarget="_blank" rel="noopener noreferrer" style="opacity: .2;"><img
+                    <a target="_blank" rel="noopener noreferrer" style="opacity: .2;"><img
                             src="assets/img/ic-twitter-black.svg" alt=""></a>
                         <div></div>
                         <hr class="green">
+                </div>
+            </div>
+            <div class="member-card">
+                <h4>Umi</h4>
+                <p>Volunteer | FEB 19</p>
+                <div class="footer">
+                    <a href="https://www.instagram.com/belaxx__" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-insta-black.svg" alt=""></a>
+                    <a href="https://twitter.com/nabilahbel_" target="_blank"
+                        rel="noopener noreferrer"><img src="assets/img/ic-twitter-black.svg" alt=""></a>
+                    <div></div>
+                    <hr class="green">
                 </div>
             </div>
             <div class="member-card">

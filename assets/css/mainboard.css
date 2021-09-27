@@ -930,6 +930,9 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+  .about-us .ripple-effect {
+    padding: 78px 40px 87px 40px;
+  }
   .member1 img, .member2 img {
     width: 150px;
   }
@@ -964,6 +967,12 @@ body {
     line-height: 17px;
   }
   .line > p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-us .ripple-effect {
     width: 100%;
   }
 }
