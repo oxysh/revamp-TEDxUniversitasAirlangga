@@ -148,11 +148,11 @@ const lna =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/iqbaal.png" alt="">
+                <img src="assets/img/mainboard/iqbaal.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/rio.png" alt="">
+                <img src="assets/img/mainboard/rio.png" alt="">
                 <div class="member-card">
                     <h4>Rio</h4>
                     <p>Co-Manager | FEB 20</p>
@@ -287,11 +287,11 @@ const eventDiv =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/rehan.png" alt="">
+                <img src="assets/img/mainboard/rehan.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/sekar.png" alt="">
+                <img src="assets/img/mainboard/sekar.png" alt="">
                 <div class="member-card">
                     <h4>Sekar</h4>
                     <p>Co-Manager | FISIP 19</p>
@@ -437,11 +437,11 @@ const curation =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/ervitha.png" alt="">
+                <img src="assets/img/mainboard/ervitha.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/ubin.png" alt="">
+                <img src="assets/img/mainboard/ubin.png" alt="">
                 <div class="member-card">
                     <h4>Aarnee</h4>
                     <p>Co-Manager | FISIP 19</p>
@@ -551,11 +551,11 @@ const sponsor =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/tito.png" alt="">
+                <img src="assets/img/mainboard/tito.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/ajeng.png" alt="">
+                <img src="assets/img/mainboard/ajeng.png" alt="">
                 <div class="member-card">
                     <h4>Ajeng</h4>
                     <p>Co-Manager | FEB 19</p>
@@ -691,11 +691,11 @@ const marketing =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/charisma.png" alt="">
+                <img src="assets/img/mainboard/charisma.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/alyssa.png" alt="">
+                <img src="assets/img/mainboard/alyssa.png" alt="">
                 <div class="member-card">
                     <h4>Alyssa</h4>
                     <p>Co-Manager | FEB 19</p>
@@ -853,11 +853,11 @@ const merchandise =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/happy.png" alt="">
+                <img src="assets/img/mainboard/happy.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/silvi.png" alt="">
+                <img src="assets/img/mainboard/silvi.png" alt="">
                 <div class="member-card">
                     <h4>Silvi</h4>
                     <p>Co-Manager | FIB 19</p>
@@ -1029,11 +1029,11 @@ const design =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/naura.png" alt="">
+                <img src="assets/img/mainboard/naura.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/nadia.png" alt="">
+                <img src="assets/img/mainboard/nadia.png" alt="">
                 <div class="member-card">
                     <h4>Nadia</h4>
                     <p>Co-Manager | FEB 19</p>
@@ -1132,11 +1132,11 @@ const video =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/aji.png" alt="">
+                <img src="assets/img/mainboard/aji.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/dana.png" alt="">
+                <img src="assets/img/mainboard/dana.png" alt="">
                 <div class="member-card">
                     <h4>Dana</h4>
                     <p>Co-Manager | FEB 19</p>
@@ -1222,11 +1222,11 @@ const sosmed =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/genada.png" alt="">
+                <img src="assets/img/mainboard/genada.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/raiza.png" alt="">
+                <img src="assets/img/mainboard/raiza.png" alt="">
                 <div class="member-card">
                     <h4>Raiza</h4>
                     <p>Co-Manager | FIB 19</p>
@@ -1360,11 +1360,11 @@ const webdev =
                         <hr class="red">
                     </div>
                 </div>
-                <img src="assets/img/ubin.png" alt="">
+                <img src="assets/img/mainboard/ubin.png" alt="">
                 <div class="back-green"></div>
             </div>
             <div class="member2">
-                <img src="assets/img/yer.png" alt="">
+                <img src="assets/img/mainboard/yer.png" alt="">
                 <div class="member-card">
                     <h4>Yer</h4>
                     <p>Co-Manager | FST 19</p>
