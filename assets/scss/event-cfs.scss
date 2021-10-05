@@ -140,13 +140,14 @@
 .announcement {
     width: 100%;
     min-height: 100vh;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
 
-    > h2 {
+    h2.smaller {
         font-size: 24px;
         line-height: 30px;
     }
@@ -154,14 +155,23 @@
     .timeline {
         width: 80%;
         padding: 2rem;
-        display: grid;
-        grid-template-areas: 
-        'oprec announceI interview final'
-        'fill fill fill fill';
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
         border-radius: 10px;
         background: radial-gradient(85.32% 274.11% at 9.58% 40.75%, rgba(150, 0, 1, 0.13) 0%, rgba(69, 42, 43, 0.2) 50.96%, rgba(0, 79, 79, 0.126) 100%);
         box-shadow: 0px 20px 50px #000000;
+    }
+
+    .tl-lg {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .tl-sm {
+        display: none;
     }
 
     input[name="timeline"] {
@@ -197,22 +207,6 @@
         &:hover::after {
             opacity: .2;
         }
-
-        &[for="oprec"] {
-            grid-area: oprec;
-        }
-
-        &[for="announceI"] {
-            grid-area: announceI;
-        }
-
-        &[for="interview"] {
-            grid-area: interview;
-        }
-
-        &[for="final"] {
-            grid-area: final;
-        }
     }
 
     .date-container {
@@ -237,17 +231,203 @@
 
     .announce-content {
         grid-area: fill;
-
-        padding: .5rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
         border-radius: 10px;
         background: radial-gradient(85.32% 274.11% at 9.58% 40.75%, rgba(150, 0, 1, 0.13) 0%, rgba(69, 42, 43, 0.2) 50.96%, rgba(0, 79, 79, 0.126) 100%);
         box-shadow: 0px 20px 50px #000000;
+        transition: opacity 1s cubic-bezier(0.01, 0.27, 0.34, 0.92);
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+    }
+
+    .announce-body {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bigest {
+        font-size: 48px;
+        line-height: 63px;
+        padding: 16vh 0;
+    }
+
+    .requirement {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        div {
+            width: 144px;
+        }
+    }
+
+    .the-winner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .member-card {
+        width: 200px;
+        height: fit-content;
+        position: relative;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: #DDE4E4;
+        
+        h4 {
+            font-size: 24px;
+            text-align: start;
+            color: $batman;
+        }
+        
+        p {
+            font-weight: 400;
+            color: $batman;
+        }
+        
+        .footer {
+            width: 100%;
+            margin-top: .5rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        
+        a {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid $batman;
+            
+            img {
+                width: 10px;
+                height: 10px;
+                margin: 0;
+            }
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        
+        hr {
+            width: 100px;
+            margin: 0;
+            opacity: 1;
+            
+            &.red {
+                border-top: 4px solid $prime-red;
+            }
+            
+            &.green {
+                border-top: 4px solid $prime-green;
+            }
+        }
+    }
+    
+    .winner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.75rem;
+    }
+
+    .announce-footer {
+        width: 50%;
+
+        h6 {
+            color: $dim-grey;
+        }
     }
 }
 
 @media screen and (max-width: 992px) {
     .description {
         max-width: 80%;
+    }
+
+    .announcement {
+        .tl-lg {
+            display: none;
+        }
+
+        .tl-sm {
+            width: 100%;
+            margin: auto;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .tl-card {
+            width: 160px;
+        }
+
+        .fade-slide {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            width: auto;
+            padding: 1rem;
+            color: $white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .announce-body {
+            width: 100%;
+        }
+
+        .requirement, .the-winner {
+            flex-direction: column;
+        }
+
+        .announce-footer {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .announcement {
+        .bigest {
+            font-size: 30px;
+            line-height: 36px;
+            padding: 10vh 0;
+        }
     }
 }
 
@@ -271,4 +451,9 @@
             padding: 1.25rem;
         }
     }
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
