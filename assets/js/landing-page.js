@@ -1,36 +1,12 @@
-let rect = $('.x-container')[0].getBoundingClientRect();
-let mouse = { x: 0, y: 0, moved: false };
-
-$("body").mousemove(e => {
-    mouse.moved = true;
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-});
-
-// Ticker event will be called on every frame
-TweenLite.ticker.addEventListener('tick', () => {
-    if (mouse.moved && window.innerWidth >= '576') {
-        parallaxIt(".x", -20);
-        parallaxIt(".slide", -20);
-    }
-    mouse.moved = false;
-});
-
-function parallaxIt(target, movement) {
-    TweenMax.to(target, 0.5, {
-        x: (mouse.x - rect.width / 2) / rect.width * movement,
-        y: (mouse.y - rect.height / 2) / rect.height * movement
-    });
-}
-
-$(window).on('resize scroll', () => {
-    rect = $('.x-container')[0].getBoundingClientRect();
+// CLICK TO START
+$('#click').click(() => {
+    $('body')[0].classList.remove('no-scroll')
+    window.scrollBy(0, ($('.heading')[0].offsetHeight - 80));
 })
 
-// Ripple Effect-nya pool
-$('.pool').ripples({
-    resolution: 256,
-    perturbance: 0.005
+// ON RELOAD: BACK TO TOP
+$(document).ready(function () {
+    $(this).scrollTop(0);
 });
 
 // Hover event-nya
