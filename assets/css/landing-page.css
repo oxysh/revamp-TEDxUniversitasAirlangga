@@ -843,16 +843,6 @@ h2.smaller {
   opacity: 1;
 }
 
-.about .desc .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .5rem;
-}
-
 .about a.button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1040,8 +1030,6 @@ h2.smaller {
 }
 
 #speaker1 .speaker-desc a, #speaker2 .speaker-desc a, #speaker3 .speaker-desc a, #speaker4 .speaker-desc a, #speaker5 .speaker-desc a {
-  width: 20px;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1051,14 +1039,9 @@ h2.smaller {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 50%;
-  border: 1px solid #010101;
-}
-
-#speaker1 .speaker-desc a img, #speaker2 .speaker-desc a img, #speaker3 .speaker-desc a img, #speaker4 .speaker-desc a img, #speaker5 .speaker-desc a img {
-  width: 10px;
-  height: 10px;
-  margin: 0;
+  text-decoration: underline;
+  color: #010101;
+  font-size: 18px;
 }
 
 #speaker1 .speaker-desc a:hover, #speaker2 .speaker-desc a:hover, #speaker3 .speaker-desc a:hover, #speaker4 .speaker-desc a:hover, #speaker5 .speaker-desc a:hover {
@@ -1164,6 +1147,7 @@ h2.smaller {
 }
 
 .events .event {
+  width: 325px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

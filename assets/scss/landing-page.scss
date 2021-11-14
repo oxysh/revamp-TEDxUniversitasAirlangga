@@ -180,12 +180,6 @@ h2.smaller {
             background-color: $prime-red;
             opacity: 1;
         }
-
-        .buttons {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-        }
     }
 
     a.button {
@@ -376,19 +370,12 @@ h2.smaller {
         }
 
         a {
-            width: 20px;
-            height: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            border: 1px solid $batman;
-            
-            img {
-                width: 10px;
-                height: 10px;
-                margin: 0;
-            }
+            text-decoration: underline;
+            color: $batman;
+            font-size: 18px;
     
             &:hover {
                 transform: scale(1.1);
@@ -465,6 +452,7 @@ h2.smaller {
     }
 
     .event {
+        width: 325px;
         display: flex;
         flex-direction: column;
         align-items: center;
