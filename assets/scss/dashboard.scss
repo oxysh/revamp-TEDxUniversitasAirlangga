@@ -65,6 +65,66 @@
     align-items: flex-start;
     gap: 1.5rem;
 
+    .ted-talk {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .headline {
+            width: 100%;
+            margin-top: 70px;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+            background-color: rgba(163, 189, 190, 0.5);
+            background-blend-mode: hard-light;
+            border: 1px solid $white;
+            border-radius: 10px 10px 0 0;
+
+            > img {
+                height: 150px;
+                margin-top: -70px;
+            }
+
+            h3 {
+                width: fit-content;
+                font-weight: 500;
+            }
+
+            h2, h3 {
+                margin: 0;
+            }
+            
+            hr {
+                width: 60px;
+                opacity: 1;
+                color: $white;
+            }
+        }
+
+        .status {
+            padding: 2.5rem 2rem;
+            width: 100%;
+            display: flex;
+            border-radius: 0 0 10px 10px;
+            border: 1px solid $white;
+            background-color: #0101014D;
+            background-blend-mode: hue;
+
+            .desc {
+                width: 50%;
+                
+                h2 {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+
+    }
+
     .main-card {
         width: 100%;
         display: flex;
@@ -229,6 +289,27 @@
     .participated {
         align-items: center;
 
+        .ted-talk {
+            width: 80%;
+
+            .headline {
+                margin-top: 50px;
+
+                > img {
+                    height: 100px;
+                    margin-top: -50px;
+                }
+            }
+            
+            .status {
+                padding: 1rem 2rem;
+
+                .desc {
+                    width: 80%;
+                }
+            }
+        }
+
         .main-card {
             width: 80%;
             flex-direction: column;
@@ -256,8 +337,12 @@
                 align-self: center;
             }
 
-            > div > h2 {
-                text-align: center;
+            > div {
+                align-items: center;
+
+                > h2 {
+                    text-align: center;
+                }
             }
         }
 
