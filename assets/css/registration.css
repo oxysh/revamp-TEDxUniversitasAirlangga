@@ -623,7 +623,7 @@ footer .content-footer .copyright h5 {
 
 body {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .content {
@@ -812,6 +812,66 @@ body {
 
 .content .right fieldset:not(:first-of-type) {
   display: none;
+}
+
+.content .alert {
+  z-index: 999;
+  width: 80%;
+  max-width: 500px;
+  padding: 2rem 0 0 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  background-color: #E2E2E2;
+  border-radius: 10px;
+  border: none;
+}
+
+.content .alert h2, .content .alert h3 {
+  text-align: center;
+  color: #010101;
+}
+
+.content .alert-body {
+  width: 100%;
+  padding: 20px 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background-color: rgba(163, 189, 190, 0.5);
+  border-radius: 0 0 10px 10px;
+}
+
+.content .backdrop {
+  z-index: 998;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #010101B3;
 }
 
 @media screen and (max-width: 992px) {
